@@ -2,8 +2,8 @@
 # -*- coding: UTF-8 -*-
 
 '''
-Template file for testing functions and classes
-./simple_tdd_template.py test; red_green_bar.py $? $COLUMNS
+Program do sprawdzenia wyliczeń najkrótszej
+różnicy kąta
 '''
 
 import sys
