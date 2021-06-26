@@ -18,6 +18,8 @@ def f(heading, target):
     result = target - heading
     if result > 180:
         result = result - 360
+    elif result < 0:
+        result = result + 360
     return result
 
 
@@ -54,6 +56,12 @@ class TestSomething(unittest.TestCase):
         TestSomething:
         '''
         self.assertEqual(f(360, 0), 0)
+
+    def test_f(self):
+        '''
+        TestSomething:
+        '''
+        self.assertEqual(f(255, 10), 115)
 
 
 if __name__ == '__main__':
