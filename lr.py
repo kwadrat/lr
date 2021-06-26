@@ -14,9 +14,10 @@ def f(heading, target):
     '''
     Wyznacz najkrótszą różnicę kąta
     '''
-    if target == 255:
-        return -115
-    return target - heading
+    result = target - heading
+    if result > 180:
+        result = result - 360
+    return result
 
 
 class TestSomething(unittest.TestCase):
