@@ -17,7 +17,7 @@ def f(heading, target):
     result = target - heading
     if result > 180:
         result = result - 360
-    elif result < 0:
+    if result < 0:
         result = result + 360
     if result > 180:
         result -= 360
