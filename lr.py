@@ -14,6 +14,7 @@ def f(heading, target):
     '''
     Wyznacz najkrótszą różnicę kąta
     '''
+    heading = heading % 360
     result = target - heading
     if result > 180:
         result = result - 360
@@ -47,6 +48,12 @@ class TestSomething(unittest.TestCase):
         TestSomething:
         '''
         self.assertEqual(f(10, 255), -115)
+
+    def test_e(self):
+        '''
+        TestSomething:
+        '''
+        self.assertEqual(f(360, 0), 0)
 
 
 if __name__ == '__main__':
