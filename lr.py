@@ -14,7 +14,6 @@ def f(heading, target):
     '''
     Wyznacz najkrótszą różnicę kąta
     '''
-    heading = heading % 360
     result = target - heading
     if result > 180:
         result = result - 360
