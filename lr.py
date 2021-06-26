@@ -20,6 +20,8 @@ def f(heading, target):
         result = result - 360
     elif result < 0:
         result = result + 360
+    if result > 180:
+        result -= 360
     return result
 
 
@@ -62,6 +64,12 @@ class TestSomething(unittest.TestCase):
         TestSomething:
         '''
         self.assertEqual(f(255, 10), 115)
+
+    def test_g(self):
+        '''
+        TestSomething:
+        '''
+        self.assertEqual(f(10, -60), -70)
 
 
 if __name__ == '__main__':
